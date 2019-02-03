@@ -36,9 +36,17 @@ public class recursion{
   }
   /*As Per classwork*/
   public static ArrayList<Integer> makeAllSums(int n) {
-    return makeAllSumsHelper(n, 1);
+    ArrayList<Integer> sum = new ArrayList<Integer>();
+    makeAllSumsHelper(n, 0, sum);
+    return sum;
   }
-  private static ArrayList<Integer> makeAllSumsHelper(int max, int currentNum) {
-    
+  private static void makeAllSumsHelper(int max, Integer partialSum, ArrayList<Integer> sumArray) {
+    if (max == 0) {
+      sumArray.add(partialSum);
+    }
+    if (max > 0) {
+      makeAllSumsHelper(max - 1, partialSum + max, sumArray);
+      makeAllSumsHelper(max - 1, partialSum, sumArray);
+    }
   }
 }
