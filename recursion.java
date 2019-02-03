@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String[] args) {
     //System.out.println("Square root of " + args[0] + " is: " + sqrt(Integer.parseInt(args[0]), .001));
-    System.out.println("Index " + args[0] + " of the fibbonaci sequence is: " + fib(Integer.parseInt(args[0])));
+    //System.out.println("Index " + args[0] + " of the fibbonaci sequence is: " + fib(Integer.parseInt(args[0])));
+    System.out.println(makeAllSums(Integer.parseInt(args[0])).toString());
   }
 
   /*Recursively find the sqrt using Newton's approximation
