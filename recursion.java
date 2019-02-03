@@ -32,10 +32,13 @@ public class recursion{
     if (currentIndex == targetIndex){
       return first;
     }
-    return  fibHelper(targetIndex, second, first + second, currentIndex + 1);
+    return fibHelper(targetIndex, second, first + second, currentIndex + 1);
   }
   /*As Per classwork*/
-  public static ArrayList<Integer> makeAllSums(){
-    return null;
+  public static ArrayList<Integer> makeAllSums(int n) {
+    return makeAllSumsHelper(n, 1);
+  }
+  private static ArrayList<Integer> makeAllSumsHelper(int max, int currentNum) {
+    
   }
 }
